@@ -15,7 +15,5 @@ jobs:
  checkout_job:
   runs-on: ubuntu-latest
   steps:
-    - run : mkdir path/artifacts
-    - uses: actions/checkout@v3
-    - run : sampletext > path/artifacts/sample.txt
+    - run : sampletext > sample.txt
     
