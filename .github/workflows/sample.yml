@@ -12,3 +12,13 @@ jobs:
    - name: script
      run: |      
        ls
+ checkout_job:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - run : mkdir path/artifacts
+    - run : sampletext > path/artifacts/sample.txt
+    - uses: actions/upload-artifact@v3
+      with:
+       name: upload
+       path: path/artifacts/sample.txt  
