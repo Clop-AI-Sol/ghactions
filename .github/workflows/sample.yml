@@ -9,11 +9,13 @@ jobs:
   steps:
    - name: checkout
      uses: actions/checkout@v2
+   - run : sampletext > sample.txt  
+   - uses: actions/upload-artifact@v3
+     with:
+      name: test-art
+      path: sample.txt
    - name: script
      run: |      
        ls
- checkout_job:
-  runs-on: ubuntu-latest
-  steps:
-    - run : sampletext > sample.txt
+
     
