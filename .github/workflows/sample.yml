@@ -10,12 +10,6 @@ jobs:
    - name: checkout
      uses: actions/checkout@v3
    - run : sampletext >> sample.txt  
-   - uses: actions/upload-artifact@v3
-     with:
-      name: test-art
-      path: sample.txt
-   - name: script
-     run: |      
-       ls
+  
 
     
