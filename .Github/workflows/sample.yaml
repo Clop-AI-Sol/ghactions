@@ -1,0 +1,17 @@
+name: test
+on: 
+    push:
+        branches:
+            - main
+jobs:
+   test_job:
+     runs-on: ubuntu-latest
+     steps:
+        
+        - uses: actions/checkout@v3
+        - run: mkdir -p path/artifact
+        - run: echo sampletext > path/artifact/sample.text
+        - uses: actions/upload-artifact@v3
+          with:
+            name: test-art
+            path: path/artifact/sample.text
