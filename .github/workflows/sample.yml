@@ -9,7 +9,7 @@ jobs:
   steps:
    - name: checkout
      uses: actions/checkout@v3
-   - run : "sampletext" >> sample.txt  
+   - run : echo "sampletext" >> sample.txt  
   
 
     
